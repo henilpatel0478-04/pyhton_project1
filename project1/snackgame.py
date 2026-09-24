@@ -23,7 +23,6 @@ body = []
 pts = 0
 best = 0
 
-# text drawer
 writer = turtle.Turtle()
 writer.hideturtle()
 writer.penup()
@@ -71,11 +70,9 @@ def reset_game():
 while True:
     win.update()
 
-    # wall hit
     if abs(head.xcor()) > 285 or abs(head.ycor()) > 285:
         reset_game()
 
-    # food collision
     if head.distance(apple) < 20:
         apple.goto(random.randint(-260, 260), random.randint(-260, 260))
 
